@@ -27,7 +27,6 @@ public class Library implements Serializable {
             System.out.println("❌ 保存数据失败: " + e.getMessage());
         }
     }
-
     // 从文件加载数据
     @SuppressWarnings("unchecked")
     public void loadData() {

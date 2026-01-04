@@ -11,10 +11,13 @@ public class App {
         Library library = new Library();
 
         // 初始化测试数据
-        library.addBook(new Book("Java核心技术", "Cay S. Horstmann", "978-7-111-63375-2"));
-        library.addBook(new Book("算法导论", "Thomas H. Cormen", "978-7-111-13017-7"));
-        library.addUser(new User("张三"));
-        library.addUser(new User("李四"));
+        if (library.getAllBooks().isEmpty()) {
+            // 只在数据为空时添加测试数据
+            library.addBook(new Book("Java核心技术", "Cay S. Horstmann", "978-7-111-63375-2"));
+            library.addBook(new Book("算法导论", "Thomas H. Cormen", "978-7-111-13017-7"));
+            library.addUser(new User("张三"));
+            library.addUser(new User("李四"));
+        }
 
         while (true) {
             System.out.println("\n========== 图书管理系统 ==========");
